@@ -1,0 +1,30 @@
+<assembly
+        xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0 http://maven.apache.org/xsd/assembly-1.1.0.xsd">
+    <id>release</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+
+    <fileSets>
+        <fileSet>
+            <directory>${basedir}/target/${projectName}</directory>
+            <outputDirectory>.</outputDirectory>
+            <includes>
+                <include>*.sh</include>
+                <include>*.jar</include>
+                <include>lib/*.jar</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/target/${projectName}</directory>
+            <outputDirectory>.</outputDirectory>
+            <lineEnding>windows</lineEnding>
+            <includes>
+                <include>*.txt</include>
+                <include>*.bat</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
