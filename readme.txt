@@ -5,5 +5,5 @@ ${projectName}
 3. Run
     - Windows:
         run.bat
-    - Linux:
+    - Linux/Mac OS:
         ./run.sh
